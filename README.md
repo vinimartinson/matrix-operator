@@ -9,6 +9,8 @@
 [![Claude](https://img.shields.io/badge/Powered%20by-Claude%20Sonnet%20%2B%20Haiku-orange)](https://anthropic.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+![Header](./header-matrix-operator.png)
+
 ```
   ███╗   ███╗ █████╗ ████████╗██████╗ ██╗██╗  ██╗
   ████╗ ████║██╔══██╗╚══██╔══╝██╔══██╗██║╚██╗██╔╝
@@ -18,6 +20,7 @@
   ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝
          O P E R A T O R  //  NEBUCHADNEZZAR
 ```
+
 
 You are the **Operator**. Not Neo. Not Trinity. Not Morpheus.
 
