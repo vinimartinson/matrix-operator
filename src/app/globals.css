@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0a0a;
+  --bg-translucent: rgba(10, 10, 10, 0.88);
+  --text: #c0c0c0;
+  --green: #00ff41;
+  --green-dim: #00cc33;
+  --green-dark: #003b00;
+  --red: #ff3333;
+  --yellow: #ffcc00;
+  --cyan: #00ccff;
+  --orange: #ff8800;
+  --prompt-color: #00ff41;
+  --error-color: #ff3333;
+}
+
+@font-face {
+  font-family: 'Matrix Code';
+  src: local('JetBrains Mono'), local('Fira Code'), local('Courier New');
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100dvh;
+  background: var(--bg);
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* Lock scrolling on the game page */
+.game-page,
+.game-page body {
+  height: 100dvh;
+  overflow: hidden;
+}
+
+/* Terminal scrollbar */
+.terminal-output::-webkit-scrollbar {
+  width: 4px;
+}
+.terminal-output::-webkit-scrollbar-track {
+  background: transparent;
+}
+.terminal-output::-webkit-scrollbar-thumb {
+  background: #1a3a1a;
+  border-radius: 2px;
+}
+.terminal-output {
+  scrollbar-width: thin;
+  scrollbar-color: #1a3a1a transparent;
+}
+
+/* Text glow effect for important elements */
+.text-glow {
+  text-shadow: 0 0 8px var(--green), 0 0 16px rgba(0, 255, 65, 0.3);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 8px var(--red), 0 0 16px rgba(255, 51, 51, 0.3);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 8px var(--cyan), 0 0 16px rgba(0, 204, 255, 0.3);
+}
+
+/* Scan line effect */
+.scanlines::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* CRT flicker */
+@keyframes flicker {
+  0% { opacity: 0.97; }
+  5% { opacity: 0.95; }
+  10% { opacity: 0.97; }
+  15% { opacity: 0.94; }
+  20% { opacity: 0.98; }
+  100% { opacity: 0.97; }
+}
+
+.crt-flicker {
+  animation: flicker 0.15s infinite alternate;
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Typing animation for boot sequence */
+@keyframes typeIn {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Alert flash */
+@keyframes alertFlash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.alert-flash {
+  animation: alertFlash 0.5s ease-in-out infinite;
+}
+
+/* Agent comm panel scrollbar */
+.agent-chat-feed::-webkit-scrollbar {
+  width: 3px;
+}
+.agent-chat-feed::-webkit-scrollbar-track {
+  background: transparent;
+}
+.agent-chat-feed::-webkit-scrollbar-thumb {
+  background: var(--green-dark);
+  border-radius: 2px;
+}
+.agent-chat-feed {
+  scrollbar-width: thin;
+  scrollbar-color: var(--green-dark) transparent;
+}
+
+/* Download animation pulse */
+@keyframes downloadPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.download-active {
+  animation: downloadPulse 0.4s ease-in-out infinite;
+}
+
+/* Skill badge glow */
+.skill-badge {
+  display: inline-block;
+  padding: 1px 5px;
+  border-radius: 2px;
+  font-size: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  text-shadow: 0 0 4px var(--cyan);
+}
+
+/* Mobile: stack panels vertically */
+@media (max-width: 640px) {
+  html, body {
+    font-size: 12px;
+  }
+}
