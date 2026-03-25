@@ -11,17 +11,6 @@
 
 ![Header](./header-matrix-operator.png)
 
-```
-  ███╗   ███╗ █████╗ ████████╗██████╗ ██╗██╗  ██╗
-  ████╗ ████║██╔══██╗╚══██╔══╝██╔══██╗██║╚██╗██╔╝
-  ██╔████╔██║███████║   ██║   ██████╔╝██║ ╚███╔╝
-  ██║╚██╔╝██║██╔══██║   ██║   ██╔══██╗██║ ██╔██╗
-  ██║ ╚═╝ ██║██║  ██║   ██║   ██║  ██║██║██╔╝ ██╗
-  ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝
-         O P E R A T O R  //  NEBUCHADNEZZAR
-```
-
-
 You are the **Operator**. Not Neo. Not Trinity. Not Morpheus.
 
 You're the one in the chair, watching green code cascade down a screen while your crew is plugged into a world that doesn't exist. You guide them through the streets of the simulation, hack cameras before Smith sees them, trigger lures to pull threats away, and keep the Nebuchadnezzar flying deep enough to avoid detection.
