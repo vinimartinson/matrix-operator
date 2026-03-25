@@ -427,4 +427,13 @@ Good luck, Operator.
 ---
 
 *Built with Next.js, React, Zustand, and the Anthropic API.*
-*Inspired by the Wachowskis' vision of a world behind the world.*
+
+## Disclaimer
+
+This project is a fan-made work inspired by The Matrix.
+The Matrix and all related properties are owned by Warner Bros. Entertainment Inc.
+This project is not affiliated with or endorsed by Warner Bros.
+
+## Attribution
+
+If you use or modify this project, please give proper credit.
